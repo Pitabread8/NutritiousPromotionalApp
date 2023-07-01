@@ -9,13 +9,21 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        NavigationStack {
+            VStack {
+            }
+            .toolbar {
+                ToolbarItemGroup(placement: .status) {
+                Link("About", destination: URL(string: "https://www.esteelauder.com/nutritious-skincare-benefits")!)
+                        .padding(.horizontal, 30)
+                        .padding(.vertical, 10)
+                        .foregroundColor(.white)
+                        .background(Rectangle()
+                            .foregroundColor(.black))
+                        .cornerRadius(25)
+                    }
+                }
         }
-        .padding()
     }
 }
 
