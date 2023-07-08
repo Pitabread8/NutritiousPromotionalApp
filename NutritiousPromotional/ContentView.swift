@@ -11,6 +11,11 @@ struct ContentView: View {
     var body: some View {
         NavigationStack {
             VStack {
+                Image("Estee_Lauder_Logo")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .padding(.horizontal, 100)
+                
             }
             .toolbar {
                 ToolbarItemGroup(placement: .status) {
