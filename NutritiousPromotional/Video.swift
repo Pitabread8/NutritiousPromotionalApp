@@ -19,7 +19,7 @@ struct Video: View {
                 ScrollView {
                     VStack {
                         VideoPlayer(player: player)
-                            .frame(width: 360, height: 360)
+                            .frame(width: 400, height: 400)
                         let _ = player.isMuted = true
                     }
                     .id(vid)
@@ -29,7 +29,7 @@ struct Video: View {
                     })
                     .onPreferenceChange(ScrollOffsetPreferenceKey.self) { value in
                         if self.scrollPosition.y > value.y {
-                            player.rate = 1.0
+                            player.rate = 2.0
                             player.pause()
                             proxy.scrollTo(vid)
                         }
@@ -38,7 +38,7 @@ struct Video: View {
                     Spacer()
                         .frame(height: 1)
                 }
-                .frame(height: 360)
+                .frame(height: 400)
             }
         }
     }

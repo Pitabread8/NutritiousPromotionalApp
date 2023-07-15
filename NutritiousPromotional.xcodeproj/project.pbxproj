@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E05FE032A623A2D002462FD /* Carousel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E05FE022A623A2D002462FD /* Carousel.swift */; };
 		0E30CA0E2A589FE10075A951 /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E30CA0D2A589FDF0075A951 /* Video.swift */; };
 		0E30CA102A58A3B40075A951 /* SP23_Nutritious_Hero_Campaign_Nutrigenomics_20s_1920x1920_Sound_Super_GLOBAL_COMP.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 0E30CA0F2A58A3B40075A951 /* SP23_Nutritious_Hero_Campaign_Nutrigenomics_20s_1920x1920_Sound_Super_GLOBAL_COMP.mp4 */; };
 		0E55B1E82A4FE9EC0090AFCF /* NutritiousPromotionalApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E55B1E72A4FE9EC0090AFCF /* NutritiousPromotionalApp.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0E05FE022A623A2D002462FD /* Carousel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Carousel.swift; sourceTree = "<group>"; };
 		0E30CA0D2A589FDF0075A951 /* Video.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
 		0E30CA0F2A58A3B40075A951 /* SP23_Nutritious_Hero_Campaign_Nutrigenomics_20s_1920x1920_Sound_Super_GLOBAL_COMP.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = SP23_Nutritious_Hero_Campaign_Nutrigenomics_20s_1920x1920_Sound_Super_GLOBAL_COMP.mp4; path = "../../../Downloads/Estée Lauder Challenge _ Summer 2023/Nutritious Videos/SP23_Nutritious_Hero_Campaign_Nutrigenomics_20s_1920x1920_Sound_Super_GLOBAL_COMP.mp4"; sourceTree = "<group>"; };
 		0E55B1E42A4FE9EC0090AFCF /* NutritiousPromotional.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NutritiousPromotional.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -58,6 +60,7 @@
 				0E30CA0F2A58A3B40075A951 /* SP23_Nutritious_Hero_Campaign_Nutrigenomics_20s_1920x1920_Sound_Super_GLOBAL_COMP.mp4 */,
 				0E55B1E72A4FE9EC0090AFCF /* NutritiousPromotionalApp.swift */,
 				0E55B1E92A4FE9EC0090AFCF /* ContentView.swift */,
+				0E05FE022A623A2D002462FD /* Carousel.swift */,
 				0E30CA0D2A589FDF0075A951 /* Video.swift */,
 				0E55B1EB2A4FE9F00090AFCF /* Assets.xcassets */,
 				0E55B1ED2A4FE9F00090AFCF /* Preview Content */,
@@ -147,6 +150,7 @@
 				0E55B1EA2A4FE9EC0090AFCF /* ContentView.swift in Sources */,
 				0E30CA0E2A589FE10075A951 /* Video.swift in Sources */,
 				0E55B1E82A4FE9EC0090AFCF /* NutritiousPromotionalApp.swift in Sources */,
+				0E05FE032A623A2D002462FD /* Carousel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
