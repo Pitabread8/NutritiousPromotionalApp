@@ -11,9 +11,10 @@ struct ContentView: View {
     let green = Color(red: 0.733, green: 0.718, blue: 0.31)
     let light = Color(red: 0.957, green: 0.816, blue: 0.855)
     let pink = Color(red: 0.953, green: 0.208, blue: 0.349)
-    let dark = Color(red: 0.863, green: 0.075, blue: 0.259)
     @State var slides: [String] = ["estee 47", "estee 48"]
     @State var slide = false
+    @State var products: [String] = ["estee 17", "estee 22", "estee 19", "estee 20"]
+    @State var prices: [String] = ["$27.00", "$42.00", "$47.00", "$48.00"]
     
     init() {
         UIToolbar.appearance().setBackgroundImage(UIImage(),
@@ -33,6 +34,7 @@ struct ContentView: View {
             ScrollView {
                 VStack {
                     Video()
+                    
                     VStack {
                         Text("The results are in.")
                             .font(.largeTitle)
@@ -45,20 +47,68 @@ struct ContentView: View {
                             .fontWeight(.semibold)
                             .foregroundColor(green)
                     }
-                    .padding(.horizontal, 20)
-                    .padding(.vertical, 340)
+                    .frame(maxWidth: .infinity)
+//                    .padding(.horizontal, 10)
+                    .padding(.vertical, 360)
                     .background(Rectangle() .foregroundColor(light))
+                    .padding(.vertical)
+                    
                     Carousel()
+                    
                     Button {
                         slide.toggle()
                     } label: {
                         Image(slide == true ? slides[1] : slides[0])
                             .resizable()
                             .aspectRatio(contentMode: .fit)
-                            .padding([.leading, .bottom, .trailing])
+                            .cornerRadius(25)
+                            .shadow(radius: 5)
+                            .padding()
                             .id(slide)
                             .transition(.opacity.animation(.easeOut))
                     }
+                    
+                    VStack {
+                        Text("\"I've been using the Nutritious skincare products, and let me tell you, they are absolute game-changers!\"")
+                            .font(.title)
+                            .fontWeight(.bold)
+                            .foregroundColor(.white)
+                        Spacer()
+                            .frame(height: 25)
+                        Text("Jenifer @fashionmejen")
+                            .font(.title3)
+                            .fontWeight(.semibold)
+                            .foregroundColor(light)
+                    }
+                    .padding(.horizontal, 20)
+                    .padding(.vertical, 30)
+                    .background(Rectangle() .foregroundColor(pink) .cornerRadius(25))
+                    
+                    VStack {
+                        ForEach(0..<2) { h in
+                            HStack {
+                                ForEach(0..<2) { i in
+                                    ZStack(alignment: .bottom) {
+                                        Image(products[i + 2*h])
+                                            .resizable()
+                                            .aspectRatio(contentMode: .fit)
+                                            .frame(width: 160)
+                                        Text("\(prices[i + 2*h])")
+                                            .font(.title2)
+                                            .foregroundColor(.white)
+                                            .padding(8)
+                                            .frame(width: 160)
+                                            .background(Rectangle() .foregroundColor(green) )
+                                            .opacity(0.8)
+                                    }
+                                    .cornerRadius(25)
+                                    .shadow(radius: 10)
+                                    .padding([.top, .leading, .trailing])
+                                }
+                            }
+                        }
+                    }
+                    .padding(.bottom)
                 }
             }
             .toolbar {

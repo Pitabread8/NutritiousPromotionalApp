@@ -18,6 +18,7 @@ struct Carousel: View {
                 Image(images[i])
                     .resizable()
                     .aspectRatio(contentMode: .fit)
+                    .cornerRadius(25)
                     .padding(.horizontal)
                     .scaleEffect(1.0 - abs(distance(i)) * 0.4)
                     .opacity(1.0 - abs(distance(i)) * 0.3)

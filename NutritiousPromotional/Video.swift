@@ -29,7 +29,7 @@ struct Video: View {
                     })
                     .onPreferenceChange(ScrollOffsetPreferenceKey.self) { value in
                         if self.scrollPosition.y > value.y {
-                            player.rate = 2.0
+                            player.rate = 1.0
                             player.pause()
                             proxy.scrollTo(vid)
                         }
