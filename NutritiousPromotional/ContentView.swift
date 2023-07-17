@@ -48,7 +48,6 @@ struct ContentView: View {
                             .foregroundColor(green)
                     }
                     .frame(maxWidth: .infinity)
-//                    .padding(.horizontal, 10)
                     .padding(.vertical, 360)
                     .background(Rectangle() .foregroundColor(light))
                     .padding(.vertical)
@@ -94,7 +93,7 @@ struct ContentView: View {
                                             .aspectRatio(contentMode: .fit)
                                             .frame(width: 160)
                                         Text("\(prices[i + 2*h])")
-                                            .font(.title2)
+                                            .font(.headline)
                                             .foregroundColor(.white)
                                             .padding(8)
                                             .frame(width: 160)
@@ -103,7 +102,7 @@ struct ContentView: View {
                                     }
                                     .cornerRadius(25)
                                     .shadow(radius: 10)
-                                    .padding([.top, .leading, .trailing])
+                                    .padding()
                                 }
                             }
                         }
@@ -114,6 +113,7 @@ struct ContentView: View {
             .toolbar {
                 ToolbarItemGroup(placement: .bottomBar) {
                     Link("Shop Now", destination: URL(string: "https://www.esteelauder.com/nutritious-skincare-benefits")!)
+                        .font(.headline)
                         .padding(.horizontal, 30)
                         .padding(.vertical, 10)
                         .foregroundColor(.white)
